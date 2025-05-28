@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sandwich Fruit</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #00ccff;
+    }
+
+    .container {
+      width: 80%;
+      max-width: 900px;
+      height: auto;
+      text-align: center;
+      background-color: aliceblue;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .title {
+      font-size: 24px;
+      color: #228b22;
+      border: 2px solid #228b22;
+      padding: 10px;
+      display: inline-block;
+      margin-bottom: 20px;
+      border-radius: 20px;
+    }
+
+    .card-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+      gap: 20px;
+    }
+
+    .card {
+      width: 80%;
+      background-color: #f9f9f9;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .card img {
+      width: 40%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 16px;
+      color: #555;
+    }
+
+    .f {
+      display: flexbox;
+      justify-content: center;
+      gap: 10px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .bicon {
+      margin-right: 5px;
+      height: 35px;
+      width: 35px;
+      border: 2px solid black;
+      border-radius: 50%;
+      background-color: white;
+      display: flexbox;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .icon {
+      width: 78%;
+      height: 78%;
+      margin-top: 2px;
+    }
+
+    .cart {
+      margin-top: 30px;
+      padding: 15px;
+      border: 2px dashed #333;
+      border-radius: 10px;
+      background-color: #f1f1f1;
+    }
+
+    .cart h3 {
+      margin-bottom: 10px;
+    }
+
+    .cart-item {
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">STAR SANDWICH</h1>
+    <div class="card-container">
+      <div class="card">
+        <img src="https://raw.githubusercontent.com/bagas754/projectpkk/refs/heads/main/image/IMG-20250524-WA0018.jpg" alt="Sandwich 1" />
+        <h4>SANDWICH ANGGUR</h4>
+        <p>Rp10.000</p>
+        <button onclick="addToCart('Sandwich Anggur', 10000)">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <img src="https://raw.githubusercontent.com/bagas754/projectpkk/refs/heads/main/image/IMG-20250524-WA0016.jpg" alt="Sandwich 2" />
+        <h4>SANDWICH STRAWBERRY</h4>
+        <p>Rp12.000</p>
+        <button onclick="addToCart('Sandwich Strawberry', 12000)">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <img src="https://raw.githubusercontent.com/bagas754/projectpkk/refs/heads/main/image/IMG-20250524-WA0015.jpg" alt="Sandwich 3" />
+        <h4>SANDWICH PISANG</h4>
+        <p>Rp11.000</p>
+        <button onclick="addToCart('Sandwich Pisang', 11000)">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <img src="https://raw.githubusercontent.com/bagas754/projectpkk/refs/heads/main/image/IMG-20250524-WA0019.jpg" alt="Sandwich 4" />
+        <h4>MIX SANDWICH</h4>
+        <p>Rp13.000</p>
+        <button onclick="addToCart('Mix Sandwich', 13000)">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- KERANJANG -->
+    <div class="cart">
+      <h3>Keranjang Belanja</h3>
+      <div id="cart-items" class="cart-item"></div>
+      <h4 id="cart-total">Total: Rp0</h4>
+    </div>
+
+    <!-- CONTACT & ADDRESS -->
+    <div class="f" id="contact">
+      <h4>CONTACT US</h4>
+      <a href="https://api.whatsapp.com/send/?phone=%2B6285715552613&text&type=phone_number&app_absent=0"><button class="bicon"><img src="https://cdn1.iconfinder.com/data/icons/apps-8/64/whatsapp-wa-apps-platform-128.png" class="icon" /></button></a>
+      <a href=""><button class="bicon"><img src="https://cdn1.iconfinder.com/data/icons/apps-8/64/instagram-ig-apps-platform-128.png" class="icon" /></button></a>
+      <a href="mailto:starsandwich01@gmail.com"><button class="bicon"><img src="https://cdn0.iconfinder.com/data/icons/social-media-and-logos-11/32/Gmail_envelope_letter_email_Gmail_envelope_letter_email-128.png" class="icon" /></button></a>
+      <a href="https://maps.app.goo.gl/826VmNZYtxRTP6Ui9" target="_blank"><button class="bicon"><img src="https://cdn1.iconfinder.com/data/icons/twitter-ui-colored/48/JD-22-128.png" class="icon" /></button></a>
+    </div>
+
+    <div class="alamat" id="address">
+      <h4>ADDRESS</h4>
+      <h6>Dekat Toko Gorden Tati Jaya, deket Klinik Aqma sebrang toko playstation, Jl. Raya Cikampek-Parakan, Cikampek Kota, Kec. Cikampek, Karawang, Jawa Barat 41373</h6>
+    </div>
+  </div>
+
+  <!-- SCRIPT -->
+  <script>
+    const cartItemsElement = document.getElementById("cart-items");
+    const cartTotalElement = document.getElementById("cart-total");
+    let cart = [];
+
+    function addToCart(name, price) {
+      cart.push({ name, price });
+      renderCart();
+    }
+
+    function renderCart() {
+      cartItemsElement.innerHTML = "";
+      let total = 0;
+      cart.forEach(item => {
+        cartItemsElement.innerHTML += `<div>${item.name} - Rp${item.price.toLocaleString()}</div>`;
+        total += item.price;
+      });
+      cartTotalElement.innerText = "Total: Rp" + total.toLocaleString();
+    }
+  </script>
+</body>
+</html>
