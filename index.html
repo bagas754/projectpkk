@@ -81,6 +81,47 @@
     button:hover {
       background-color: #1a701a;
     }
+
+    /* Contact section style */
+    .contact-section {
+      background-color: #e6f5ff;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .icon-row {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .circle-icon {
+      border: 3px solid black;
+      border-radius: 50%;
+      width: 55px;
+      height: 55px;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .circle-icon img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .contact-section h4 {
+      margin: 10px 0;
+    }
+
+    .contact-section p {
+      font-size: 14px;
+      color: #333;
+    }
   </style>
 </head>
 <body>
@@ -124,6 +165,24 @@
       <h4 id="cart-total">Total: Rp0</h4>
       <button onclick="checkoutWhatsApp()">Checkout via WhatsApp</button>
     </div>
+
+    <!-- CONTACT US & ADDRESS -->
+    <div class="contact-section">
+      <h4>CONTACT US</h4>
+      <div class="icon-row">
+        <a href="https://wa.me/6285715552613" target="_blank"><div class="circle-icon"><img src="https://cdn1.iconfinder.com/data/icons/apps-8/64/whatsapp-wa-apps-platform-128.png" alt="WhatsApp"></div></a>
+        <a href="https://www.instagram.com/starsandw1ch?igsh=ZGM2amUyeGd5a3Zn target="_blank"><div class="circle-icon"><img src="https://cdn1.iconfinder.com/data/icons/apps-8/64/instagram-ig-apps-platform-128.png" alt="Instagram"></div></a>
+        <a href="mailto:starsandwich01@gmail.com"><div class="circle-icon"><img src="https://cdn0.iconfinder.com/data/icons/social-media-and-logos-11/32/Gmail_envelope_letter_email_Gmail_envelope_letter_email-128.png" alt="Gmail"></div></a>
+        <a href="https://maps.app.goo.gl/826VmNZYtxRTP6Ui9" target="_blank"><div class="circle-icon"><img src="https://cdn1.iconfinder.com/data/icons/twitter-ui-colored/48/JD-22-128.png" alt="Map"></div></a>
+      </div>
+
+      <h4>ADDRESS</h4>
+      <p>
+        Dekat Toko Gorden Tati Jaya, deket Klinik Aqma sebrang toko playstation,<br>
+        Jl. Raya Cikampek-Parakan, Cikampek Kota, Kec. Cikampek,<br>
+        Karawang, Jawa Barat 41373
+      </p>
+    </div>
   </div>
 
   <script>
@@ -162,7 +221,7 @@
 
       message += `\nTotal: Rp${total.toLocaleString()}`;
       const encodedMessage = encodeURIComponent(message);
-      const phoneNumber = "6285715552613"; // Ganti sesuai nomor Anda
+      const phoneNumber = "6285715552613";
       const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
       window.open(whatsappLink, "_blank");
