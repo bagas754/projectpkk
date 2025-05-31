@@ -11,25 +11,24 @@
       padding: 0;
       display: flex;
       justify-content: center;
-      align-items: center;
       background: #00ccff;
     }
 
     .container {
       width: 80%;
       max-width: 900px;
-      height: auto;
       text-align: center;
       background-color: aliceblue;
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin: 20px;
     }
 
     .title {
       font-size: 24px;
-      color: #228b22;
-      border: 2px solid #228b22;
+      color: #228B22;
+      border: 2px solid #228B22;
       padding: 10px;
       display: inline-block;
       margin-bottom: 20px;
@@ -40,7 +39,6 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-bottom: 20px;
       gap: 20px;
     }
 
@@ -50,45 +48,12 @@
       padding: 10px;
       border-radius: 10px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      text-align: center;
     }
 
     .card img {
       width: 40%;
       border-radius: 10px;
       margin-bottom: 10px;
-    }
-
-    .card p {
-      font-size: 16px;
-      color: #555;
-    }
-
-    .f {
-      display: flexbox;
-      justify-content: center;
-      gap: 10px;
-      text-align: center;
-      margin-top: 40px;
-    }
-
-    .bicon {
-      margin-right: 5px;
-      height: 35px;
-      width: 35px;
-      border: 2px solid black;
-      border-radius: 50%;
-      background-color: white;
-      display: flexbox;
-      align-items: center;
-      justify-content: center;
-      margin-top: 10px;
-    }
-
-    .icon {
-      width: 78%;
-      height: 78%;
-      margin-top: 2px;
     }
 
     .cart {
@@ -99,45 +64,56 @@
       background-color: #f1f1f1;
     }
 
-    .cart h3 {
-      margin-bottom: 10px;
-    }
-
     .cart-item {
       text-align: left;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: none;
+      background-color: #228B22;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1a701a;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h1 class="title">STAR SANDWICH</h1>
+
     <div class="card-container">
       <div class="card">
-        <img src="https://raw.githubusercontent.com/bagas754/projectpkk/refs/heads/main/image/IMG-20250524-WA0018.jpg" alt="Sandwich 1" />
+        <img src="https://raw.githubusercontent.com/bagas754/projectpkk/refs/heads/main/image/IMG-20250524-WA0018.jpg" alt="Sandwich Anggur" />
         <h4>SANDWICH ANGGUR</h4>
-        <p>Rp10.000</p>
-        <button onclick="addToCart('Sandwich Anggur', 10000)">Add to Cart</button>
+        <p>Rp7.000</p>
+        <button onclick="addToCart('Sandwich Anggur', 7000)">keranjang belanja</button>
       </div>
 
       <div class="card">
-        <img src="https://raw.githubusercontent.com/bagas754/projectpkk/refs/heads/main/image/IMG-20250524-WA0016.jpg" alt="Sandwich 2" />
+        <img src="https://raw.githubusercontent.com/bagas754/projectpkk/refs/heads/main/image/IMG-20250524-WA0016.jpg" alt="Sandwich Strawberry" />
         <h4>SANDWICH STRAWBERRY</h4>
-        <p>Rp12.000</p>
-        <button onclick="addToCart('Sandwich Strawberry', 12000)">Add to Cart</button>
+        <p>Rp7.000</p>
+        <button onclick="addToCart('Sandwich Strawberry', 7000)">keranjang belanja</button>
       </div>
 
       <div class="card">
-        <img src="https://raw.githubusercontent.com/bagas754/projectpkk/refs/heads/main/image/IMG-20250524-WA0015.jpg" alt="Sandwich 3" />
+        <img src="https://raw.githubusercontent.com/bagas754/projectpkk/refs/heads/main/image/IMG-20250524-WA0015.jpg" alt="Sandwich Pisang" />
         <h4>SANDWICH PISANG</h4>
-        <p>Rp11.000</p>
-        <button onclick="addToCart('Sandwich Pisang', 11000)">Add to Cart</button>
+        <p>Rp7.000</p>
+        <button onclick="addToCart('Sandwich Pisang', 7000)">keranjang belanja</button>
       </div>
 
       <div class="card">
-        <img src="https://raw.githubusercontent.com/bagas754/projectpkk/refs/heads/main/image/IMG-20250524-WA0019.jpg" alt="Sandwich 4" />
+        <img src="https://raw.githubusercontent.com/bagas754/projectpkk/refs/heads/main/image/IMG-20250524-WA0019.jpg" alt="Mix Sandwich" />
         <h4>MIX SANDWICH</h4>
-        <p>Rp13.000</p>
-        <button onclick="addToCart('Mix Sandwich', 13000)">Add to Cart</button>
+        <p>Rp8.000</p>
+        <button onclick="addToCart('Mix Sandwich', 8000)">keranjang belanja</button>
       </div>
     </div>
 
@@ -146,24 +122,10 @@
       <h3>Keranjang Belanja</h3>
       <div id="cart-items" class="cart-item"></div>
       <h4 id="cart-total">Total: Rp0</h4>
-    </div>
-
-    <!-- CONTACT & ADDRESS -->
-    <div class="f" id="contact">
-      <h4>CONTACT US</h4>
-      <a href="https://api.whatsapp.com/send/?phone=%2B6285715552613&text&type=phone_number&app_absent=0"><button class="bicon"><img src="https://cdn1.iconfinder.com/data/icons/apps-8/64/whatsapp-wa-apps-platform-128.png" class="icon" /></button></a>
-      <a href=""><button class="bicon"><img src="https://cdn1.iconfinder.com/data/icons/apps-8/64/instagram-ig-apps-platform-128.png" class="icon" /></button></a>
-      <a href="mailto:starsandwich01@gmail.com"><button class="bicon"><img src="https://cdn0.iconfinder.com/data/icons/social-media-and-logos-11/32/Gmail_envelope_letter_email_Gmail_envelope_letter_email-128.png" class="icon" /></button></a>
-      <a href="https://maps.app.goo.gl/826VmNZYtxRTP6Ui9" target="_blank"><button class="bicon"><img src="https://cdn1.iconfinder.com/data/icons/twitter-ui-colored/48/JD-22-128.png" class="icon" /></button></a>
-    </div>
-
-    <div class="alamat" id="address">
-      <h4>ADDRESS</h4>
-      <h6>Dekat Toko Gorden Tati Jaya, deket Klinik Aqma sebrang toko playstation, Jl. Raya Cikampek-Parakan, Cikampek Kota, Kec. Cikampek, Karawang, Jawa Barat 41373</h6>
+      <button onclick="checkoutWhatsApp()">Checkout via WhatsApp</button>
     </div>
   </div>
 
-  <!-- SCRIPT -->
   <script>
     const cartItemsElement = document.getElementById("cart-items");
     const cartTotalElement = document.getElementById("cart-total");
@@ -182,6 +144,28 @@
         total += item.price;
       });
       cartTotalElement.innerText = "Total: Rp" + total.toLocaleString();
+    }
+
+    function checkoutWhatsApp() {
+      if (cart.length === 0) {
+        alert("Keranjang masih kosong!");
+        return;
+      }
+
+      let message = "Halo, saya ingin memesan:\n";
+      let total = 0;
+
+      cart.forEach(item => {
+        message += `- ${item.name} (Rp${item.price.toLocaleString()})\n`;
+        total += item.price;
+      });
+
+      message += `\nTotal: Rp${total.toLocaleString()}`;
+      const encodedMessage = encodeURIComponent(message);
+      const phoneNumber = "6285715552613"; // Ganti sesuai nomor Anda
+      const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+      window.open(whatsappLink, "_blank");
     }
   </script>
 </body>
